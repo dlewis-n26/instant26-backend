@@ -1,6 +1,7 @@
 package com.example.instant26backend.controllers;
 
 import org.apache.commons.lang3.RandomStringUtils;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -39,7 +40,7 @@ public class PaymentsController {
         return paymentId;
     }
 
-    @PostMapping("/{paymentId}")
+    @PostMapping(path = "/{paymentId}", consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public ResponseEntity<?> createTransaction(@PathVariable("paymentId") String paymentId,
                                                @RequestBody @NotNull @Valid Transaction transaction) {
