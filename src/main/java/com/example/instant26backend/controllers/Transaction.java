@@ -4,7 +4,7 @@ public class Transaction {
 
     public String sender;
 
-    public Double amount;
+    public boolean shown;
 
     public String getSender() {
         return sender;
@@ -12,13 +12,5 @@ public class Transaction {
 
     public void setSender(String sender) {
         this.sender = sender;
-    }
-
-    public Double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(Double amount) {
-        this.amount = amount;
     }
 }

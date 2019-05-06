@@ -11,7 +11,7 @@ public class Payments {
     private static Map<String, Payment> payments = new HashMap<>();
 
     public static void add(Payment payment) {
-        payments.put(payment.id, payment);
+        payments.put(payment.dto.getId(), payment);
     }
 
     public static Optional<Payment> get(String paymentId) {

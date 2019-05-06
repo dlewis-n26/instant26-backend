@@ -5,18 +5,12 @@ import java.util.List;
 
 public class Payment {
 
-    public String id;
-
-    public String referenceText;
-
-    public int expectedPayments;
+    public PaymentDto dto;
 
     public List<Transaction> transactions;
 
-    public Payment(String id, String referenceText, int expectedPayments) {
-        this.id = id;
-        this.referenceText = referenceText;
-        this.expectedPayments = expectedPayments;
+    public Payment(PaymentDto dto) {
+        this.dto = dto;
         this.transactions = new ArrayList<>();
     }
 }
