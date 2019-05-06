@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class Payments {
 
@@ -11,6 +12,10 @@ public class Payments {
 
     public static void add(Payment payment) {
         payments.put(payment.id, payment);
+    }
+
+    public static Optional<Payment> get(String paymentId) {
+        return Optional.of(payments.get(paymentId));
     }
 
     public static List<Payment> list() {
